@@ -11,6 +11,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
     }
     buildTypes {
         release {
@@ -21,11 +26,42 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'am.gaut.android.toolbarbutton:toolbarbutton:0.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'io.realm:android-adapters:2.1.1'
+    implementation 'jp.wasabeef:picasso-transformations:2.1.2'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation 'com.pranavpandey.android:dynamic-dialogs:3.0.1'
+    implementation 'com.pranavpandey.android:dynamic-dialogs:1.3.0'
+    implementation 'com.flipboard:bottomsheet-core:1.5.3'
+    implementation'com.flipboard:bottomsheet-commons:1.5.3'
+    // If you want to use the GPU Filters
+    //implementation' io.realm:android-adapters:2.0.0'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    implementation 'eu.long1:spacetablayout:1.0.4'
+    //implementation 'com.github.sd6352051:NiftyDialogEffects:v1.0.3'
+    //implementation 'cn.pedant.sweetalert:library:1.3'
+    // implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    //implementation 'com.github.Leogiroux:sweet-alert-dialog:'
+    implementation 'com.cocosw:bottomsheet:1.5.0@aar'
+
+
 }
+apply plugin: 'realm-android'
