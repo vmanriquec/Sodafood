@@ -1,23 +1,13 @@
-package com.sodapop.sodafood.modelo;
+package com.sodapop.sodafood.Realm;
 
-public class Detalleiniciodeldia {
+import io.realm.RealmList;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+public class DetalleiniciodeldiaRealm extends RealmObject {
+    @PrimaryKey
     private int iddetalleiniciodeldia;
     private int idiniciodeldia;
     private int idproducto;
-    private int cantidad;
-    private Double precventa;
-    private String nombreproducto;
-    private int idalmacen;
-
-    public Double getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(Double subtotal) {
-        this.subtotal = subtotal;
-    }
-
-    private Double subtotal;
 
     public int getIddetalleiniciodeldia() {
         return iddetalleiniciodeldia;
@@ -75,5 +65,26 @@ public class Detalleiniciodeldia {
         this.idalmacen = idalmacen;
     }
 
+    public Double getSubtotal() {
+        return subtotal;
+    }
 
+    public void setSubtotal(Double subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public RealmList<ProductoRealm> getProductoRealms() {
+        return productoRealms;
+    }
+
+    public void setProductoRealms(RealmList<ProductoRealm> productoRealms) {
+        this.productoRealms = productoRealms;
+    }
+
+    private int cantidad;
+    private Double precventa;
+    private String nombreproducto;
+    private int idalmacen;
+    private Double subtotal;
+    private RealmList<ProductoRealm> productoRealms;
 }

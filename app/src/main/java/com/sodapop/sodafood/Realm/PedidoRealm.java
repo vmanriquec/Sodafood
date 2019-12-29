@@ -20,6 +20,16 @@ public class PedidoRealm  extends RealmObject {
     private int idusuario;
     private int idalmacen;
     private String idfacebook ;
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    private Double total;
     private RealmList<Detallepedidorealm> detallepedidorealms;
 
 

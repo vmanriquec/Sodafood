@@ -1,56 +1,13 @@
-package com.sodapop.sodafood.modelo;
+package com.sodapop.sodafood.Realm;
 
 import java.util.Date;
 
-public class Iniciodeldia {
-
-
+import io.realm.RealmList;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+public class IniciodeldiaRealm extends RealmObject {
+    @PrimaryKey
     private int idiniciodeldia;
-    private int idusuario;
-    private int idalmacen;
-    private int idvalidadorentrega;
-    private int idvalidadorrecibe;
-    private Date fechadeentrega;
-    private int numerodedocumento;
-    private int idestados;
-    private int  idtipomovimiento;
-    private Date fechainicial;
-
-    public Double getTotal() {
-        return total;
-    }
-
-    public void setTotal(Double total) {
-        this.total = total;
-    }
-
-    private Double total;
-
-    public int getIdestados() {
-        return idestados;
-    }
-
-    public void setIdestados(int idestados) {
-        this.idestados = idestados;
-    }
-
-    public int getIdtipomovimiento() {
-        return idtipomovimiento;
-    }
-
-    public void setIdtipomovimiento(int idtipomovimiento) {
-        this.idtipomovimiento = idtipomovimiento;
-    }
-
-    public Date getFechainicial() {
-        return fechainicial;
-    }
-
-    public void setFechainicial(Date fechainicial) {
-        this.fechainicial = fechainicial;
-    }
-
-
 
     public int getIdiniciodeldia() {
         return idiniciodeldia;
@@ -108,8 +65,47 @@ public class Iniciodeldia {
         this.numerodedocumento = numerodedocumento;
     }
 
+    public int getIdestados() {
+        return idestados;
+    }
 
+    public void setIdestados(int idestados) {
+        this.idestados = idestados;
+    }
 
+    public int getIdtipomovimiento() {
+        return idtipomovimiento;
+    }
 
+    public void setIdtipomovimiento(int idtipomovimiento) {
+        this.idtipomovimiento = idtipomovimiento;
+    }
+
+    public Date getFechainicial() {
+        return fechainicial;
+    }
+
+    public void setFechainicial(Date fechainicial) {
+        this.fechainicial = fechainicial;
+    }
+
+    public RealmList<Detallepedidorealm> getDetallepedidorealms() {
+        return detallepedidorealms;
+    }
+
+    public void setDetallepedidorealms(RealmList<Detallepedidorealm> detallepedidorealms) {
+        this.detallepedidorealms = detallepedidorealms;
+    }
+
+    private int idusuario;
+    private int idalmacen;
+    private int idvalidadorentrega;
+    private int idvalidadorrecibe;
+    private Date fechadeentrega;
+    private int numerodedocumento;
+    private int idestados;
+    private int  idtipomovimiento;
+    private Date fechainicial;
+    private RealmList<Detallepedidorealm> detallepedidorealms;
 
 }
