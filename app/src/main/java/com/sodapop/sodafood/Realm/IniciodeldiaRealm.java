@@ -106,6 +106,16 @@ public class IniciodeldiaRealm extends RealmObject {
     private int idestados;
     private int  idtipomovimiento;
     private Date fechainicial;
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    private Double total;
     private RealmList<Detallepedidorealm> detallepedidorealms;
 
 }

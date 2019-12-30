@@ -1,8 +1,13 @@
 package com.sodapop.sodafood.Realm;
 
+import android.util.Log;
+
 import com.sodapop.sodafood.modelo.Iniciodeldia;
 
+import java.util.List;
+
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class Crudiniciodeldia {
   
@@ -28,74 +33,74 @@ public class Crudiniciodeldia {
                   IniciodeldiaRealm iniciodeldiaRealm = realm.createObject(IniciodeldiaRealm.class, index);
                   iniciodeldiaRealm.setIdestados(iniciodeldiaRealm.getIdestados());
 
-                  pedidoRealm.setFechapedido(pedidoRealm.getFechapedido());
-                  pedidoRealm.setIdalmacen(pedidoRealm.getIdalmacen());
-                  pedidoRealm.setDescripcionpedido(pedidoRealm.getDescripcionpedido());
-                  pedidoRealm.setIdcliente(pedidoRealm.getIdcliente());
-                  pedidoRealm.setIdmesa(pedidoRealm.getIdmesa());
-                  pedidoRealm.setIdusuario(pedidoRealm.getIdusuario());
-                  pedidoRealm.setIdfacebook(pedidoRealm.getIdfacebook());
-  pedidoRealm.setTotalpedido(pedidoRealm.getTotalpedido());
+                  iniciodeldiaRealm.setFechainicial( iniciodeldiaRealm.getFechainicial());
+                  iniciodeldiaRealm.setIdalmacen(iniciodeldiaRealm.getIdalmacen());
+                  iniciodeldiaRealm.setNumerodedocumento(iniciodeldiaRealm.getNumerodedocumento());
+                  iniciodeldiaRealm.setFechadeentrega(iniciodeldiaRealm.getFechadeentrega());
+                  iniciodeldiaRealm.setIdtipomovimiento(iniciodeldiaRealm.getIdtipomovimiento());
+                    iniciodeldiaRealm.setIdvalidadorentrega(iniciodeldiaRealm.getIdvalidadorentrega());
+ iniciodeldiaRealm.setIdvalidadorrecibe(iniciodeldiaRealm.getIdvalidadorrecibe());
+ iniciodeldiaRealm.setTotal(iniciodeldiaRealm.getTotal());
                     }
           });
       }
-      public final static List<PedidoRealm> getAllPedidorealm(){
+      public final static List<IniciodeldiaRealm> getAllealm(){
+
           Realm realm = Realm.getDefaultInstance();
-          RealmResults<PedidoRealm> PedidoRealm = realm.where(PedidoRealm.class).findAll();
-          for(PedidoRealm Pedidorealm: PedidoRealm){
-              Log.d("TAG", "idpedido: " + Pedidorealm.getIdpedido() );
-  
-  
+          RealmResults<IniciodeldiaRealm> IniciodeldiaRealm = realm.where(IniciodeldiaRealm.class).findAll();
+          for(IniciodeldiaRealm iniciorealm: IniciodeldiaRealm){
+              Log.d("TAG", "idinicodeldia: " + iniciorealm.getIdiniciodeldia() );
+   
           }
-          return PedidoRealm;
+          return IniciodeldiaRealm;
       }
   
   
-      public final static PedidoRealm getPedidorealmByIdpedido(int idpedido){
+      public final static IniciodeldiaRealm traeriniciodeldiaporid(int idiniciodeldia){
           Realm realm = Realm.getDefaultInstance();
-          PedidoRealm PedidoRealm = realm.where(PedidoRealm.class).equalTo("idpedido", idpedido).findFirst();
-          if(PedidoRealm != null){
-              Log.d("TAG", "idmesadepedidoatrare: " + PedidoRealm.getIdmesa() );
+          IniciodeldiaRealm IniciodeldiaRealm = realm.where(IniciodeldiaRealm.class).equalTo("idiniciodeldia", idiniciodeldia).findFirst();
+          if(IniciodeldiaRealm != null){
+              Log.d("TAG", "nuemro de docuento por id : " + IniciodeldiaRealm.getNumerodedocumento() );
           }
-          return PedidoRealm;
+          return IniciodeldiaRealm;
       }
   
-      public final static void Actualizartotalpedido(int idpedido, Double totalpedido){
+      public final static void Actualizartotaldeiniciodeldia(int idiniciodeldia, Double total){
   
           Realm realm = Realm.getDefaultInstance();
           realm.beginTransaction();
-          PedidoRealm pedidoRealm = realm.where(PedidoRealm.class).equalTo("idpedido", idpedido).findFirst();
-          pedidoRealm.setTotalpedido(totalpedido);
-   realm.insertOrUpdate(pedidoRealm);
+          IniciodeldiaRealm IniciodeldiaRealm = realm.where(IniciodeldiaRealm.class).equalTo("idiniciodeldia", idiniciodeldia).findFirst();
+          IniciodeldiaRealm.setTotal(total);
+   realm.insertOrUpdate(IniciodeldiaRealm);
           realm.commitTransaction();
-          Log.d("TAG", "se actualiuzo total pedido a: " + Double.toString(totalpedido ));
+          Log.d("TAG", "se actualiuzo total : " + Double.toString(total ));
       }
-      public final static void Actualizardescripciondepedido(int idpedido, String descripcionpedido){
+      public final static void Actualizarnumerodedocumento(int idiniciodeldia, int descripcionpedido){
   
           Realm realm = Realm.getDefaultInstance();
           realm.beginTransaction();
-          PedidoRealm pedidoRealm = realm.where(PedidoRealm.class).equalTo("descripcionpedido", descripcionpedido).findFirst();
-          pedidoRealm.setDescripcionpedido(descripcionpedido);
-          realm.insertOrUpdate(pedidoRealm);
+          IniciodeldiaRealm IniciodeldiaRealm = realm.where(IniciodeldiaRealm.class).equalTo("descripcionpedido", descripcionpedido).findFirst();
+          IniciodeldiaRealm.setNumerodedocumento(descripcionpedido);
+          realm.insertOrUpdate(IniciodeldiaRealm);
           realm.commitTransaction();
-          Log.d("TAG", "se actualizo descripcion de pedido: " + descripcionpedido );
+          Log.d("TAG", "se actualizo documento de inicio: " + descripcionpedido );
       }
   
-      public final static void eliminarpedidoydetallesdepedidoporidpedido(int idpedido){
+      public final static void eliminarpedidoydetallesdepedidoporidiniciodeldia(int idiniciodeldia){
           Realm realm = Realm.getDefaultInstance();
           realm.beginTransaction();
   
           realm.executeTransaction(realm1 -> {
-              RealmResults<Detallepedidorealm> result = realm1.where(Detallepedidorealm.class).equalTo("idpedido",idpedido).findAll();
+              RealmResults<DetalleiniciodeldiaRealm> result = realm1.where(DetalleiniciodeldiaRealm.class).equalTo("idiniciodeldia",idiniciodeldia).findAll();
               result.deleteAllFromRealm();
           });
-          Log.d("TAG", "se elimino todo el detalle de pedido con id : " + String.valueOf(idpedido) );
+          Log.d("TAG", "se elimino todo el detalle del dia con id : " + String.valueOf(idiniciodeldia) );
   
   
-          PedidoRealm PedidoRealm = realm.where(PedidoRealm.class).equalTo("idpedido", idpedido).findFirst();
-          PedidoRealm.deleteFromRealm();
+          IniciodeldiaRealm IniciodeldiaRealm = realm.where(IniciodeldiaRealm.class).equalTo("idiniciodeldia", idiniciodeldia).findFirst();
+          IniciodeldiaRealm.deleteFromRealm();
           realm.commitTransaction();
-          Log.d("TAG", "se elimino pedido con id : " + String.valueOf(idpedido) );
+          Log.d("TAG", "se elimino iniciodeldia con id : " + String.valueOf(idiniciodeldia) );
       }
   
   
