@@ -1,5 +1,9 @@
 package com.sodapop.sodafood.Realm;
 
+import com.sodapop.sodafood.modelo.Iniciodeldia;
+
+import io.realm.Realm;
+
 public class Crudiniciodeldia {
   
   private final static int calculateIndex(){
@@ -15,14 +19,15 @@ public class Crudiniciodeldia {
       }
   
   
-      public final static void addIniciodeldiarealm(final Iniciodeldiarealm Iniciodeldiarealm){
+      public final static void addIniciodeldiarealm(final IniciodeldiaRealm Iniciodeldiarealm){
           Realm realm = Realm.getDefaultInstance();
           realm.executeTransaction(new Realm.Transaction(){
               @Override
               public void execute(Realm realm){
-                  int index = Crudpedido.calculateIndex();
+                  int index = Crudiniciodeldia.calculateIndex();
                   IniciodeldiaRealm iniciodeldiaRealm = realm.createObject(IniciodeldiaRealm.class, index);
-                  iniciodeldiRealm.setEstadopedido(pedidoRealm.getEstadopedido());
+                  iniciodeldiaRealm.setIdestados(iniciodeldiaRealm.getIdestados());
+
                   pedidoRealm.setFechapedido(pedidoRealm.getFechapedido());
                   pedidoRealm.setIdalmacen(pedidoRealm.getIdalmacen());
                   pedidoRealm.setDescripcionpedido(pedidoRealm.getDescripcionpedido());
