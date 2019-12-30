@@ -8,7 +8,12 @@ public class DetalleiniciodeldiaRealm extends RealmObject {
     private int iddetalleiniciodeldia;
     private int idiniciodeldia;
     private int idproducto;
-
+    private int cantidad;
+    private Double precventa;
+    private String nombreproducto;
+    private int idalmacen;
+    private Double subtotal;
+    private RealmList<ProductoRealm> productoRealms;
     public int getIddetalleiniciodeldia() {
         return iddetalleiniciodeldia;
     }
@@ -81,10 +86,5 @@ public class DetalleiniciodeldiaRealm extends RealmObject {
         this.productoRealms = productoRealms;
     }
 
-    private int cantidad;
-    private Double precventa;
-    private String nombreproducto;
-    private int idalmacen;
-    private Double subtotal;
-    private RealmList<ProductoRealm> productoRealms;
+
 }
