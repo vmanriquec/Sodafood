@@ -165,7 +165,7 @@
                         android:layout_height="45dp"
                         android:layout_marginTop="3dp"
                         android:layout_weight="0.09"
-                        android:background="@drawable/guardar"
+                        android:background="@drawable/burger"
                         android:elevation="1dp"
                         android:textStyle="bold" />
 
@@ -175,8 +175,8 @@
                         android:layout_height="45dp"
                         android:layout_marginTop="3dp"
 
-                        android:background="@drawable/tachoborrar"
-                        android:textColor="@color/authui_inputTextColor"
+                        android:background="@color/accent"
+                        android:textColor="@color/colorprincipal"
                         android:textStyle="bold" />
 
                 </LinearLayout>
