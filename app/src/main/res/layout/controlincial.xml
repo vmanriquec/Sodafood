@@ -58,6 +58,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/blue_leftcorner_bkg"
                 android:text="fecha" />
         </LinearLayout>
 
@@ -126,6 +127,10 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="@color/colorPrimary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

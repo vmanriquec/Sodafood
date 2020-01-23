@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sodafood</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="login_signup_hint">d</string>
 </resources>
