@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/accent"
+    android:background="@color/colorprincipal"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="6dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:weightSum="1"
-    >
+    android:weightSum="1">
 
     <!-- Login progress -->
     <ImageView
@@ -47,42 +46,33 @@
             android:paddingTop="30dp">
 
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/phpnombreusuario"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:drawableTint="#FF4081"
+                android:hint="Usuario"
 
-                <EditText
-                    android:id="@+id/phpnombreusuario"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:drawableTint="#FF4081"
-                    android:hint="Usuario"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:textColor="@color/coloruno"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-            </android.support.design.widget.TextInputLayout>
+                android:singleLine="true"
+                android:textColor="@color/coloruno"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-                <EditText
-                    android:id="@+id/phpclaveusuario"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="25dp"
+            <EditText
+                android:id="@+id/phpclaveusuario"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
 
-                    android:drawableTint="#FF4081"
-                    android:hint="Contraseña"
-                    android:inputType="text"
-                    android:singleLine="true"
-                    android:textColor="@color/coloruno"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                android:drawableTint="#FF4081"
+                android:hint="Contraseña"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/coloruno"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/btnolvidecontrasena"
@@ -93,14 +83,6 @@
                 android:paddingTop="5dp"
                 android:text="¿Se te olvidó tu contraseña? " />
 
-
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,8 +108,7 @@
                     android:layout_below="@+id/materialTextField2"
                     android:layout_alignEnd="@+id/materialTextField2"
                     android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                     />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -152,7 +133,6 @@
 
         </LinearLayout>
     </RelativeLayout>
-
 
 
 </RelativeLayout>
