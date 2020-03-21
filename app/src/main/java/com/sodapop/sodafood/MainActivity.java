@@ -117,10 +117,7 @@ String claveusuario;
         @Override
         protected String doInBackground(String... params) {
             try {
-
-                // Enter URL address where your php file resides
-                url = new URL("https://www.sodapop.pe/sugest/apilogin.php");
-
+              url = new URL("https://www.sodapop.pe/sugest/apilogin.php");
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

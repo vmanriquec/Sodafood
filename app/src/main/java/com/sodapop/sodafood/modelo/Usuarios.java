@@ -5,9 +5,9 @@ package com.sodapop.sodafood.modelo;
  * Created by Perseo on 04/08/2014.
  */
 public class Usuarios {
-    private String idusuario,nombreusuario,claveusuario,almacenusuario,imagen;
-
-    public Usuarios(String idusuario, String nombreusuario, String claveusuario, String almacenusuario , String imagen)
+    private String nombreusuario,claveusuario,almacenusuario,imagen;
+private int idusuario;
+    public Usuarios(int idusuario, String nombreusuario, String claveusuario, String almacenusuario , String imagen)
     {
         super();
         this.idusuario=idusuario;
@@ -17,11 +17,11 @@ public class Usuarios {
         this.imagen=imagen;
     }
 
-    public String getIdusuario() {
+    public int getIdusuario() {
         return idusuario;
     }
 
-    public void setIdusuario(String idusuario) {
+    public void setIdusuario(int idusuario) {
         this.idusuario = idusuario;
     }
 
