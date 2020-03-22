@@ -29,7 +29,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="276dp"
+                android:layout_width="235dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:weightSum="1">
@@ -56,17 +56,9 @@
 
                             />
 
-                        <ImageView
-                            android:id="@+id/productoimagenp"
-                            android:layout_width="45dp"
-                            android:layout_height="match_parent"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/user" />
-
                         <TextView
                             android:id="@+id/stockp"
-                            android:layout_width="10dp"
+                            android:layout_width="217dp"
                             android:layout_height="match_parent"
                             android:layout_alignTop="@+id/view"
                             android:layout_gravity="center_horizontal|center_vertical"

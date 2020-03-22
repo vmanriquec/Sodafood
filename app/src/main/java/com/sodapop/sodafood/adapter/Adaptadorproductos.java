@@ -51,7 +51,6 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
         protected TextView idproducto;
 
         protected TextView cantidadpedida;
-        protected ImageView productoimagen;
 
         protected Button mas;
         protected Button menos;
@@ -59,7 +58,6 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
         public AdaptadorViewHolder(View v){
             super(v);
             this.idproducto=(TextView) v.findViewById(R.id.idproductop);
-            this.productoimagen=(ImageView) v.findViewById(R.id.productoimagenp);
             this.productonombre=(TextView) v.findViewById(R.id.stockp);
             this.mas=(Button)v.findViewById(R.id.botonmas);
             this.menos=(Button)v.findViewById(R.id.botonmenos);
@@ -86,45 +84,6 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
         /*asignar imagen desde url*/
         Log.d("orejitazo","siiiiii entra descripcion "+ item.getDescripcion());
 
-        foto=item.getDescripcion().toString();
-
-        Picasso.with(getApplicationContext()) .load(foto).transform(new CropCircleTransformation()).resize(100, 100)
-                .into( viewHolder.productoimagen);
-
-        viewHolder.productoimagen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Toast ImageToast = new Toast(getApplicationContext());
-                LinearLayout toastLayout = new LinearLayout(getApplicationContext());
-                toastLayout.setOrientation(LinearLayout.VERTICAL);
-
-                ImageView image = new ImageView(getApplicationContext());
-                TextView text = new TextView(getApplicationContext());
-                foto=item.getDescripcion().toString();
-
-                Picasso.with(getApplicationContext()) .load(foto).transform(new CropSquareTransformation())
-                        .resize(350, 350)
-                        .into( image);
-                text.setText(item.getIngredientes());
-                text.setTextColor(Color.RED);
-                text.setBackgroundColor(Color.WHITE);
-                text.setGravity(12);
-                toastLayout.addView(image);
-                toastLayout.addView(text);
-                ImageToast.setView(toastLayout);
-                ImageToast.setGravity (Gravity.TOP | Gravity.LEFT, 40, 40);
-                ImageToast.setDuration(Toast.LENGTH_LONG);
-                ImageToast.show();
-
-
-                ImageToast.getView().setPadding( 20, 100, 20, 20);
-
-
-
-            }
-        });
 
         /*boton mas o menos cantidad*/
         viewHolder.mas.setOnClickListener(new View.OnClickListener() {
