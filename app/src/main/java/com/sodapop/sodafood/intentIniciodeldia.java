@@ -111,6 +111,10 @@ public class intentIniciodeldia extends AppCompatActivity {
             new administradoresdelocal().execute(idalmacenactivo,"2");
     new trabajadoresdelocal().execute(idalmacenactivo,"4");
         }
+
+
+
+
         new traerproductos().execute(idalmacenactivo);
          // new traerdatosdesdecargalocal().execute(idalmacenactivo,"1","2");
 
@@ -497,19 +501,26 @@ public class intentIniciodeldia extends AppCompatActivity {
 
 
                     for (int i = 0; i < jArray.length(); i++) {
-                        JSONObject json_data = jArray.optJSONObject(i);
 
-                        mesoproducto = new Productos(json_data.getInt("idproducto"), json_data.getString("nombreproducto"),"", "",null,"");
+
+                        JSONObject json_data = jArray.optJSONObject(i);
+                        Log.d("orejitazo","siiiiii entra"+ json_data.getString("nombreproducto"));
+
+                        mesoproducto = new Productos(json_data.getInt("idproducto"), json_data.getString("nombreproducto"),"", "",null,json_data.getString("descripcion"));
+                        Log.d("orejitazo","siiiiii entra"+ mesoproducto.getDescripcion());
+
                         peopleproducto.add(mesoproducto);
-                        Log.d("orejita",mesoproducto.getNombreproducto());
+
+
 
                     }
-
+                    Log.d("orejitazo1",String.valueOf(peopleproducto.size()));
                     strArrDataproducto = dataListproducto.toArray(new String[dataListproducto.size()]);
 
+                    Log.d("orejitazo2",String.valueOf(dataListproducto.size()));
 
                     adapterproducto = new Adaptadorproductos(peopleproducto,getApplicationContext());
-                    recyclerproducto.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+                    recyclerproducto.setLayoutManager(new GridLayoutManager(getApplicationContext(), 1));
 
                     recyclerproducto.setAdapter(adapterproducto);
 

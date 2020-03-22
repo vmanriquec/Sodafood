@@ -49,7 +49,7 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
     static class AdaptadorViewHolder extends RecyclerView.ViewHolder{
         protected TextView productonombre;
         protected TextView idproducto;
-        protected TextView stockp;
+
         protected TextView cantidadpedida;
         protected ImageView productoimagen;
 
@@ -60,7 +60,7 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
             super(v);
             this.idproducto=(TextView) v.findViewById(R.id.idproductop);
             this.productoimagen=(ImageView) v.findViewById(R.id.productoimagenp);
-            this.stockp=(TextView) v.findViewById(R.id.stockp);
+            this.productonombre=(TextView) v.findViewById(R.id.stockp);
             this.mas=(Button)v.findViewById(R.id.botonmas);
             this.menos=(Button)v.findViewById(R.id.botonmenos);
             this.cantidadpedida=(TextView) v.findViewById(R.id.cantidadpedida);
@@ -76,17 +76,20 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
     public void onBindViewHolder(final Adaptadorproductos.AdaptadorViewHolder viewHolder, final int position) {
         final Productos item = items.get(position);
         viewHolder.itemView.setTag(item);
-        Log.d("si adaptador",item.getNombreproducto());
+        Log.d("orejitazo","siiiiii entraitemmm"+item.getNombreproducto());
+
         viewHolder.productonombre.setText(item.getNombreproducto());
 
         viewHolder.idproducto.setText(String.valueOf(item.getIdproducto()));
-       // viewHolder.mas.setVisibility(View.GONE);
+        // viewHolder.mas.setVisibility(View.GONE);
         //viewHolder.menos.setVisibility(View.GONE);
-/*asignar imagen desde url*/
- foto=item.getDescripcion().toString();
+        /*asignar imagen desde url*/
+        Log.d("orejitazo","siiiiii entra descripcion "+ item.getDescripcion());
 
-                    Picasso.with(getApplicationContext()) .load(foto).transform(new CropCircleTransformation()).resize(100, 100)
-                            .into( viewHolder.productoimagen);
+        foto=item.getDescripcion().toString();
+
+        Picasso.with(getApplicationContext()) .load(foto).transform(new CropCircleTransformation()).resize(100, 100)
+                .into( viewHolder.productoimagen);
 
         viewHolder.productoimagen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,8 +106,8 @@ public class Adaptadorproductos extends RecyclerView.Adapter<Adaptadorproductos.
 
                 Picasso.with(getApplicationContext()) .load(foto).transform(new CropSquareTransformation())
                         .resize(350, 350)
-                                               .into( image);
-text.setText(item.getIngredientes());
+                        .into( image);
+                text.setText(item.getIngredientes());
                 text.setTextColor(Color.RED);
                 text.setBackgroundColor(Color.WHITE);
                 text.setGravity(12);
@@ -120,19 +123,19 @@ text.setText(item.getIngredientes());
 
 
 
-                        }
+            }
         });
 
         /*boton mas o menos cantidad*/
-       viewHolder.mas.setOnClickListener(new View.OnClickListener() {
+        viewHolder.mas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String cantidad=viewHolder.cantidadpedida.getText().toString();
                 int c= Integer.parseInt(cantidad);
                 if(c>=0){
-c=c+1;viewHolder.cantidadpedida.setText( String.valueOf(c));
+                    c=c+1;viewHolder.cantidadpedida.setText( String.valueOf(c));
 
-                   // Toast.makeText(getApplicationContext(),item.getNombreproducto()+viewHolder.cantidadpedida.getText(),Toast.LENGTH_LONG).show();
+                    // Toast.makeText(getApplicationContext(),item.getNombreproducto()+viewHolder.cantidadpedida.getText(),Toast.LENGTH_LONG).show();
 
 
                 }            }
@@ -148,7 +151,7 @@ c=c+1;viewHolder.cantidadpedida.setText( String.valueOf(c));
                     c=c-1;
 
                     viewHolder.cantidadpedida.setText( String.valueOf(c));
-                 //   Toast.makeText(getApplicationContext(),item.getNombreproducto()+viewHolder.cantidadpedida.getText(),Toast.LENGTH_LONG).show();
+                    //   Toast.makeText(getApplicationContext(),item.getNombreproducto()+viewHolder.cantidadpedida.getText(),Toast.LENGTH_LONG).show();
 
                 }            }
         });

@@ -69,9 +69,11 @@
                             android:layout_width="10dp"
                             android:layout_height="match_parent"
                             android:layout_alignTop="@+id/view"
-                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal|center_vertical"
 
+                            android:layout_weight="1"
                             android:background="@drawable/botoncajaredondeada"
+                            android:gravity="center_horizontal"
                             android:inputType="textNoSuggestions"
                             android:text="xxxx"
                             android:textAlignment="center"
