@@ -3,16 +3,16 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="40dp"
     android:paddingLeft="3dp"
-    android:paddingTop="3dp"
+    android:paddingTop="6dp"
     android:paddingRight="3dp"
     android:paddingBottom="3dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardproductos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
 
         android:layout_alignParentTop="true"
         android:background="@drawable/bordes"
@@ -29,7 +29,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="235dp"
+                android:layout_width="259dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:weightSum="1">
@@ -44,7 +44,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="40dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -58,19 +58,20 @@
 
                         <TextView
                             android:id="@+id/stockp"
-                            android:layout_width="217dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="246dp"
+                            android:layout_height="40dp"
                             android:layout_alignTop="@+id/view"
                             android:layout_gravity="center_horizontal|center_vertical"
 
+                            android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/botoncajaredondeada"
-                            android:gravity="center_horizontal"
+                            android:gravity="center_horizontal|center_vertical"
                             android:inputType="textNoSuggestions"
                             android:text="xxxx"
                             android:textAlignment="center"
-                            android:textColor="@color/my_icons"
-                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -81,42 +82,56 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="0.15"
                 android:orientation="vertical"
                 android:weightSum="1">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/botonmas"
                         android:layout_width="40dp"
-                        android:layout_height="24dp"
-                        android:background="@drawable/botoncajaredondeada"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/tabcirculoverdecara"
                         android:elevation="1dp"
-                        android:text="yy"
+                        android:text="+"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/botonmenos"
-                        android:layout_width="36dp"
-                        android:layout_height="22dp"
+                        android:layout_width="42dp"
+                        android:layout_height="29dp"
 
-                        android:background="@color/accent"
-                        android:text="zz"
-                        android:textColor="@color/colorprincipal"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/fondoobservaciones"
+                        android:minHeight="40dp"
+                        android:text="--"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/cantidadpedida"
                         android:layout_width="35dp"
-                        android:layout_height="24dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginTop="3dp"
-                        android:background="@drawable/circulofondo"
+                        android:layout_height="33dp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/fondototalsoles"
                         android:gravity="center"
                         android:inputType="textNoSuggestions"
                         android:text="0"

@@ -61,43 +61,26 @@ String claveusuario;
             public void onClick(View v) {
                 if( nombreuser.getText().toString().length() == 0 || claveusuario.getText().toString().length() == 0 ){
                     nombreuser.setError( "Debes digitar un nombre y clave de usuario" );
-
                 }
                 else{
                     if( nombreuser.getText().toString().length() == 0 ){
                         nombreuser.setError( "Debes digitar un nombre usuario" );
-
                     }   else{
                         if( claveusuario.getText().toString().length() == 0 ){
                             claveusuario.setError( "Debes digitar su clave" );
-
                         }else{
-
-
                             String al =spinerio.getItemAtPosition(spinerio.getSelectedItemPosition()).toString();
                             String mesei=al;
                             String mesi = mesei.substring(0, 2);
                             String mei=mesi.trim();
                             new Loginsinfacebook().execute(nombreuser.getText().toString(),claveusuario.getText().toString(),mei);
-
-
-
                         }
 
                     }
-
-
-
                 }
             }
         });
-
-
-
-
     }
-
-
     private class Loginsinfacebook extends AsyncTask<String, String, String>
     {
         ProgressDialog pdLoading = new ProgressDialog(MainActivity.this);
@@ -336,11 +319,8 @@ String claveusuario;
                     for (int i = 0; i < jArray.length(); i++) {
                         JSONObject json_data = jArray.getJSONObject(i);
                         dataList.add(json_data.getString("nombrealm"));
-
-
                         mes = new Almacen(json_data.getInt("idalmacen"), json_data.getString("nombrealm"), json_data.getString("telfonoalm"), json_data.getString("correoalm"));
                         listaalmacen.add(mes);
-
                     }
                     strArrData = dataList.toArray(new String[dataList.size()]);
 
@@ -381,11 +361,8 @@ String claveusuario;
         editor.commit();
 
     }
-
     private void ir(){
         Intent i= new Intent(this,intentIniciodeldia.class);
-
         startActivity(i);
-
     }
 }

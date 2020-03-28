@@ -10,26 +10,13 @@ private int idpedido;
     private int idmesa;
     private Double totalpedido;
     private String estadopedido ;
-    private Date fechapedido;
+    private String fechapedido;
     private int idusuario;
     private int idalmacen;
     private String idfacebook ;
 
-    public Pedido(int idpedido, int idcliente, int idmesa, Double totalpedido, String estadopedido, Date fechapedido, int idusuario, int idalmacen, String idfacebook )
-    {
-        super();
-        this.idpedido=idpedido;
-        this.idcliente=idcliente;
-        this.idmesa=idmesa;
-        this.totalpedido=totalpedido;
-        this.estadopedido=estadopedido;
-        this.fechapedido=fechapedido;
-        this.idusuario=idusuario;
-        this.idalmacen=idalmacen;
-        this.idfacebook=idfacebook;
-    }
 
-    public Pedido(int idcliente, int idmesa, Double totalpedido, String estadopedido, Date fechapedido, int idusuario, int idalmacen, String idfacebook )
+    public Pedido(int idcliente, int idmesa, Double totalpedido, String estadopedido, String fechapedido, int idusuario, int idalmacen, String idfacebook )
     {
         super();
         this.idcliente=idcliente;
@@ -88,11 +75,11 @@ public int getIdalmacen(){return  idalmacen;}
         this.estadopedido = estadopedido;
     }
 
-    public Date getFechapedido() {
+    public String getFechapedido() {
         return fechapedido;
     }
 
-    public void setFechapedido(Date fechapedido) {
+    public void setFechapedido(String fechapedido) {
         this.fechapedido = fechapedido;
     }
 

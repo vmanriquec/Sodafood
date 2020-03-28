@@ -27,23 +27,23 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.firebase:firebase-database:16.0.1'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
-    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'am.gaut.android.toolbarbutton:toolbarbutton:0.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
 
-    implementation 'com.jakewharton:butterknife:10.0.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
-    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'io.realm:android-adapters:2.1.1'
     implementation 'jp.wasabeef:picasso-transformations:2.1.2'
     implementation 'jp.wasabeef:picasso-transformations:2.2.1'
@@ -61,9 +61,8 @@ dependencies {
     // implementation 'com.github.f0ris.sweetalert:library:1.5.1'
     //implementation 'com.github.Leogiroux:sweet-alert-dialog:'
     implementation 'com.cocosw:bottomsheet:1.5.0@aar'
-    implementation 'com.android.support:cardview-v7:28.0.0'
-
-
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //  implementation 'com.android.support:cardview-v7:28.0.0'
 
 }
 apply plugin: 'realm-android'

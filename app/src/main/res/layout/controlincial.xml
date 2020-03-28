@@ -102,25 +102,25 @@
                         android:layout_width="96dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/validadorrecibe"
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:text="Recib" />
+
+                    <Spinner
+                        android:id="@+id/spinrecibe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/validadorrecibe"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:text="Recib" />
-
-                <Spinner
-                    android:id="@+id/spinrecibe"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -178,10 +178,73 @@
             android:layout_height="5dp"
             android:background="@color/colorPrimary" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerlistado"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="570dp"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerlistado"
+                android:layout_width="223dp"
+                android:layout_height="553dp"
+                android:layout_marginBottom="20dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Ingresos" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/colorPrimary" />
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="502dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/botonlisto"
+                    android:layout_width="192dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/side_nav_bar"
+                    android:src="@drawable/ic_success" />
+
+                <ImageButton
+                    android:id="@+id/botoneditar"
+                    android:layout_width="192dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/side_nav_bar"
+                    android:src="?attr/actionModeSelectAllDrawable" />
+
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
