@@ -29,21 +29,21 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="259dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:weightSum="1">
 
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="40dp"
                         android:orientation="horizontal">
 
@@ -58,7 +58,7 @@
 
                         <TextView
                             android:id="@+id/stockp"
-                            android:layout_width="246dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_alignTop="@+id/view"
                             android:layout_gravity="center_horizontal|center_vertical"
@@ -69,7 +69,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:inputType="textNoSuggestions"
                             android:text="xxxx"
-                            android:textAlignment="center"
+                            android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="18sp"
                             android:textStyle="bold" />

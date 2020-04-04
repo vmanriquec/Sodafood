@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
@@ -178,6 +179,12 @@
             android:layout_height="5dp"
             android:background="@color/colorPrimary" />
 
+
+
+
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="570dp"
@@ -185,9 +192,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerlistado"
-                android:layout_width="223dp"
-                android:layout_height="553dp"
-                android:layout_marginBottom="20dp">
+                android:layout_width="281dp"
+                android:layout_height="553dp">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -196,23 +202,12 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Ingresos" />
-
-                <View
-                    android:id="@+id/divider3"
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="@color/colorPrimary" />
 
                 <ListView
+                    android:id="@+id/listainicio"
                     android:layout_width="wrap_content"
-                    android:layout_height="502dp" />
+                    android:layout_height="555dp"
+                    android:background="@color/fbutton_color_wet_asphalt" />
             </LinearLayout>
 
         </LinearLayout>

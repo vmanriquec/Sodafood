@@ -12,6 +12,7 @@
     <style name="StyleTheme" parent="Theme.AppCompat">
         <item name="bs_bottomSheetStyle">@style/BottomSheet.StyleDialog</item>
     </style>
+
     <style name="BottomSheet.StyleDialog" parent="BottomSheet.Dialog">
         <item name="android:backgroundDimAmount">0.5</item>
         <item name="android:windowAnimationStyle">@style/BottomSheet.Animation</item>
@@ -23,7 +24,6 @@
         <item name="bs_numColumns">4</item>
         <item name="bs_listStyle">@style/BottomSheet.Animation</item>
     </style>
-
 
 
     <style name="AppTheme.NoActionBar">

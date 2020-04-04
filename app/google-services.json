@@ -1,79 +1,42 @@
 {
   "project_info": {
-    "project_number": "162582100469",
-    "firebase_url": "https://sodapopdelivery.firebaseio.com",
-    "project_id": "sodapopdelivery",
-    "storage_bucket": "sodapopdelivery.appspot.com"
+    "project_number": "786870641512",
+    "firebase_url": "https://firesoda-a4156.firebaseio.com",
+    "project_id": "firesoda-a4156",
+    "storage_bucket": "firesoda-a4156.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:162582100469:android:056f461194c63235",
+        "mobilesdk_app_id": "1:786870641512:android:30ad53740dbfa64806ecdd",
         "android_client_info": {
-          "package_name": "com.sodadelivery"
+          "package_name": "com.firesoda.sodafood"
         }
       },
       "oauth_client": [
         {
-          "client_id": "162582100469-vb5esi9didbmkkue662fpgkdvcti7vfs.apps.googleusercontent.com",
+          "client_id": "786870641512-7d6jeb2e6fga8vu1pp10hqmdoupsc705.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.sodadelivery",
+            "package_name": "com.firesoda.sodafood",
             "certificate_hash": "416246f5b4764ed2c1d9fe49659254cc321d22b9"
           }
         },
         {
-          "client_id": "162582100469-7j3uvhqbr3qm1m3jfdb3psrhp9gg7rcg.apps.googleusercontent.com",
+          "client_id": "786870641512-ocsln85lbok32do0fnm013cl4j85htsf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBq9CogoGiT5S1vJo0DF9YvhavjduqfY00"
+          "current_key": "AIzaSyCKc3VXvaTsPYRhne-Xl9V7lGT1MYP26kY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "162582100469-7j3uvhqbr3qm1m3jfdb3psrhp9gg7rcg.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:162582100469:android:cc770ceaa6aec054bf88bc",
-        "android_client_info": {
-          "package_name": "com.sodapop.sodafood"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "162582100469-sgs2dqg5jguv0qqsdht3f9toe812gb75.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.sodapop.sodafood",
-            "certificate_hash": "416246f5b4764ed2c1d9fe49659254cc321d22b9"
-          }
-        },
-        {
-          "client_id": "162582100469-7j3uvhqbr3qm1m3jfdb3psrhp9gg7rcg.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBq9CogoGiT5S1vJo0DF9YvhavjduqfY00"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "162582100469-7j3uvhqbr3qm1m3jfdb3psrhp9gg7rcg.apps.googleusercontent.com",
+              "client_id": "786870641512-ocsln85lbok32do0fnm013cl4j85htsf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

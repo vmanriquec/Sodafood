@@ -4,4 +4,16 @@
     <string name="forgot_password">Forgot Password?</string>
 
     <string name="login_signup_hint">d</string>
+    <string name="title_comida_list">comida</string>
+    <string name="title_comida_detail">comida Detail</string>
+    <string name="comidalist_dialog_title">titulo dialog</string>
+    <string name="comidalist_dialog_ok">ok</string>
+    <string name="title_activity_navegador">Navegador</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_tabsitos">tabsitos</string>
+    <string name="title_activity_tab">tab</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
