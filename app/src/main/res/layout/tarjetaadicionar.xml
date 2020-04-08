@@ -57,8 +57,8 @@
                             />
 
                         <TextView
-                            android:id="@+id/stockp"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/stockp1"
+                            android:layout_width="228dp"
                             android:layout_height="40dp"
                             android:layout_alignTop="@+id/view"
                             android:layout_gravity="center_horizontal|center_vertical"
@@ -93,7 +93,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/botonmas"
+                        android:id="@+id/botonmas1"
                         android:layout_width="40dp"
                         android:layout_height="28dp"
                         android:layout_marginLeft="10dp"
@@ -125,7 +125,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/cantidadpedida"
+                        android:id="@+id/inventario"
                         android:layout_width="35dp"
                         android:layout_height="33dp"
                         android:layout_gravity="right"

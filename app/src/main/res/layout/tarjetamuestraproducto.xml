@@ -3,90 +3,117 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="2dp"
-    android:paddingBottom="2dp"
+    app:cardElevation="8dp"
+    android:paddingBottom="4dp"
 
     >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RelativeLayout
             android:id="@+id/imageLayout"
-            android:layout_width="350dp"
+            android:layout_width="315dp"
             android:layout_height="match_parent"
             android:paddingBottom="2dp">
 
             <TextView
-                android:id="@+id/etqueta"
-                android:layout_width="46dp"
-                android:layout_height="42dp"
-                android:layout_alignStart="@+id/itemPhoto"
-                android:layout_alignEnd="@+id/itemPhoto"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="100dp"
-                android:background="@drawable/circulofondo"
-                android:hint="n"
-                android:textSize="18dp" />
+                android:id="@+id/idproductop2"
+                android:layout_width="3dp"
+                android:layout_height="2dp"
+                android:inputType="textNoSuggestions"
+
+
+                />
 
             <TextView
-                android:id="@+id/itemName"
+                android:id="@+id/inventario"
+                android:layout_width="37dp"
+                android:layout_height="34dp"
+                android:layout_alignStart="@+id/imagen"
+                android:layout_alignEnd="@+id/imagen"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-29dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="102dp"
+                android:background="@drawable/circulofondo"
+                android:hint="n"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="49dp"
-                android:layout_marginEnd="78dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="76dp"
                 android:hint="ItemName"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/itemPrice"
+                android:id="@+id/precio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/itemName"
-                android:layout_alignStart="@+id/itemName"
-                android:layout_marginTop="26dp"
+                android:layout_alignBottom="@+id/nombre"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="-39dp"
+                android:layout_toEndOf="@+id/imagen"
                 android:hint="Price"
                 android:textSize="18dp" />
 
+            <TextView
+                android:id="@+id/ingredientes"
+                android:layout_width="171dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="91dp"
+                android:layout_marginEnd="12dp"
+                android:layout_toEndOf="@+id/imagen"
+                android:text="TextView" />
+
             <ImageView
-                android:id="@+id/itemPhoto"
-                android:layout_width="128dp"
-                android:layout_height="116dp"
+                android:id="@+id/imagen"
+                android:layout_width="111dp"
+                android:layout_height="99dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="24dp" />
+                android:layout_marginStart="28dp" />
 
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="49dp"
+            android:layout_width="92dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/botonmas"
-                android:layout_width="40dp"
-                android:layout_height="35dp"
+                android:id="@+id/botonmas1"
+                android:layout_width="99dp"
+                android:layout_height="32dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginBottom="2dp"
-                android:background="@drawable/tabcirculof"
+                android:background="@drawable/blue_leftcorner_bkg"
                 android:elevation="1dp"
-                android:text="+"
+                android:text="adicional"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/cantidadpedida"
+                android:id="@+id/cuantova"
                 android:layout_width="35dp"
                 android:layout_height="33dp"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -100,19 +127,19 @@
 
             <Button
                 android:id="@+id/botonmenos"
-                android:layout_width="40dp"
-                android:layout_height="35dp"
+                android:layout_width="92dp"
+                android:layout_height="32dp"
 
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginBottom="2dp"
-                android:background="@drawable/tabcirculof"
+                android:background="@drawable/blue_leftcorner_bkg"
                 android:minHeight="40dp"
-                android:text="--"
+                android:text="cremas"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

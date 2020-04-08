@@ -49,8 +49,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static com.firesoda.sodafood.MainActivity.CONNECTION_TIMEOUT;
-import static com.firesoda.sodafood.MainActivity.READ_TIMEOUT;
+import static com.firesoda.sodafood.Login.CONNECTION_TIMEOUT;
+import static com.firesoda.sodafood.Login.READ_TIMEOUT;
 
 public class intentIniciodeldia extends AppCompatActivity {
     String session, nombreususrio, almacenactivo, idalmacenactivo;

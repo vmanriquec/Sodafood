@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -30,6 +30,17 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+
+        <!-- Base application theme. -->
+        <!-- changing it to no actionbar -->
+        <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary" tools:ignore="PrivateResource">@color/abc_search_url_text_normal</item>
+            <item name="colorPrimaryDark" tools:ignore="PrivateResource">@color/abc_search_url_text_normal</item>
+            <item name="colorAccent">@color/accent</item>
+        </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

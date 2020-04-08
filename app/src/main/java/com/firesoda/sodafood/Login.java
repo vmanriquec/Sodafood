@@ -37,7 +37,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 String nombreusuario1;
 String claveusuario;
 
@@ -81,7 +81,7 @@ String claveusuario;
     }
     private class Loginsinfacebook extends AsyncTask<String, String, String>
     {
-        ProgressDialog pdLoading = new ProgressDialog(MainActivity.this);
+        ProgressDialog pdLoading = new ProgressDialog(Login.this);
         HttpURLConnection conn;
         URL url = null;
 
@@ -225,11 +225,11 @@ String claveusuario;
             }else if (result.equalsIgnoreCase("false")){
 
                 // If username and password does not match display a error message
-                Toast.makeText(MainActivity.this, "no estas autorizado a hacer operaciones en este almacen", Toast.LENGTH_LONG).show();
+                Toast.makeText(Login.this, "no estas autorizado a hacer operaciones en este almacen", Toast.LENGTH_LONG).show();
 
             } else if (result.equalsIgnoreCase("exception") || result.equalsIgnoreCase("unsuccessful")) {
 
-                Toast.makeText(MainActivity.this, "OOPs! hay problemas de conexion...", Toast.LENGTH_LONG).show();
+                Toast.makeText(Login.this, "OOPs! hay problemas de conexion...", Toast.LENGTH_LONG).show();
 
             }
         }
@@ -237,7 +237,7 @@ String claveusuario;
     }
     private class cargaralmacen extends AsyncTask<String, String, String> {
 
-        ProgressDialog pdLoading = new ProgressDialog(MainActivity.this);
+        ProgressDialog pdLoading = new ProgressDialog(Login.this);
         HttpURLConnection conn;
         URL url = null;
         ArrayList<Almacen> listaalmacen = new ArrayList<Almacen>();
@@ -306,7 +306,7 @@ String claveusuario;
             ArrayList<String> dataList = new ArrayList<String>();
             Almacen mes;
             if(result.equals("no rows")) {
-                Toast.makeText(MainActivity.this,"no existen datos a mostrar",Toast.LENGTH_LONG).show();
+                Toast.makeText(Login.this,"no existen datos a mostrar",Toast.LENGTH_LONG).show();
 
             }else{
 
@@ -322,7 +322,7 @@ String claveusuario;
                     }
                     strArrData = dataList.toArray(new String[dataList.size()]);
 
-                    ArrayAdapter<Almacen> adaptadorl= new ArrayAdapter<Almacen>(MainActivity.this, android.R.layout.simple_spinner_item,listaalmacen );
+                    ArrayAdapter<Almacen> adaptadorl= new ArrayAdapter<Almacen>(Login.this, android.R.layout.simple_spinner_item,listaalmacen );
                     spin.setAdapter(adaptadorl);
 
 

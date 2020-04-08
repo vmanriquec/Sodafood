@@ -9,15 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".tab"
-            android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
+        <activity android:name=".Menutab">
+            <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".intentIniciodeldia"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
         </activity>
         <activity
             android:name=".comidaListActivity"
@@ -32,8 +37,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.firesoda.sodafood.comidaListActivity" />
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".intentIniciodeldia" />
+
+
+
+
+        <activity android:name=".Login" >
+
+        </activity>
         <activity android:name=".Mainfirebase">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
